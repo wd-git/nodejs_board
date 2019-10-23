@@ -5,10 +5,17 @@
     },
     "node": {
       
+    },
+    "node-mongoose": {
+      
+    },
+    "node-express": {
+      
     }
   },
   "libs": [
     "ecma5",
     "ecma6"
-  ]
+  ],
+  "ecmaVersion": 6
 }
