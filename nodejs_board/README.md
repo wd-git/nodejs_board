@@ -21,9 +21,13 @@ putty
 ### Environment
 
 macOS : mojave
+
 node.Js : 12.13.0
+
  @Express : 4.17.1
+
  @Mongoose : 5.7.6
+ 
  @body-parser : 1.19.0
 
 mongodb : 4.2.1
