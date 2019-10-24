@@ -12,18 +12,19 @@ var app = express();
 /**
  *	MongoDB setup use : mongoose
  */
+//body-Parser 설정
+var bodyParser = require('body-parser');
 
 //mongodb setup
 var mongoose = require('mongoose');
-var promise = mongoose.connect('mongodb://15.164.224.3//board');
- 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-    // we're connected!
-    console.log('connected successfully');
-});
+mongoose.Promise = global.Promise;
 
+var mongoDB = 'mongodb://mydb:1234@15.164.224.3:27017/board'
+var promise = mongoose.connect(mongoDB, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+});
+	
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
