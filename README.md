@@ -31,7 +31,10 @@ node.Js : 12.13.0
  
  @body-parser : 1.19.0
 
-mongodb : 4.2.1
+
+RHEL 7.7
+
+ @mongodb : 4.2.1
 
 ### Memo
 what is mongoose ? = spring.mybatis (mapping @ mongodb in node.js (Express) 
