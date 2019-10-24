@@ -10,15 +10,16 @@ DB Server : AWS(EC2@RHEL7)
 
 ## Developing version
 1.0 : Simply CRUD BOARD
+
 2.0 : + UI/UX Design
 
-### Tools
+## Tools
 
 Nodeclipse
 Studio 3T
 putty
 
-### Environment
+## Environment
 
 macOS : mojave
 
