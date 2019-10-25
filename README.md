@@ -3,10 +3,6 @@
 written by wdson (2019.10)
 
 ## Usage
-Node.js (Express MVC)
-MONGODB(MONGOOSE)
-
-DB Server : AWS(EC2@RHEL7)
 
 ## Developing version
 1.0 : Simply CRUD BOARD
