@@ -1,0 +1,5 @@
+<a href="write">글쓰기</a><br>
+<% if (board !== null){
+    for(var i = 0; i < board.length; i++) { %>
+        <a href="/board/<%= board[i]._id%>"><h3><%= i+1 %> - <%=board[i].title%></h3></a>
+<%  }} %>

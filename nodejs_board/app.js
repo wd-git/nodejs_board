@@ -13,17 +13,25 @@ var app = express();
  *	MongoDB setup use : mongoose
  */
 //body-Parser 설정
-var bodyParser = require('body-parser');
+let bodyParser = require('body-parser');
 
 //mongodb setup
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-var mongoDB = 'mongodb://mydb:1234@15.164.224.3:27017/board'
-var promise = mongoose.connect(mongoDB, {
+let mongoDB = 'mongodb://mydb:1234@15.164.224.3:27017/board'
+let promise = mongoose.connect(mongoDB, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
+
+promise.then(
+  () => { console.log('db is connected') },
+  err => { console.log('cannot connect to db')}
+)
+
+// add model
+module.exports = mongoose.model('User', User)
 	
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
