@@ -2,20 +2,26 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
+// session setting
+app.use(session({
+  secret :'asdjha!@#@#$dd',
+  resave:false,
+  saveUninitialized:true
+}))
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+var User = require('./models/user.js');
 
 /**
  *	MongoDB setup use : mongoose
  */
-//body-Parser 설정
-let bodyParser = require('body-parser');
-
-//mongodb setup
+//mongodb 
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
@@ -31,8 +37,11 @@ promise.then(
 )
 
 // add model
-module.exports = mongoose.model('User', User)
-	
+//module.exports = mongoose.model('user', user);
+
+//body-Parser 
+let bodyParser = require('body-parser');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -63,3 +72,11 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// 강제종료시 포트 닫기
+process.on('SIGINT', function() {
+  console.log("Caught interrupt signal");
+  gracfulCleanJob().then(() => {
+      process.exit();
+  })
+});
