@@ -3,13 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var crypto = require('crypto');
 
 // session setting
-app.use(session({
-  secret :'asdjha!@#@#$dd',
-  resave:false,
-  saveUninitialized:true
-}))
+
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');

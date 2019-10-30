@@ -1,18 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var models = require('models');
-
-
-
+var user = require('../models/user.js');
 
 router.get('/login', function(req, res, next) {
   //nothing
 });
 
-router.post("/login", async function(req,res,next){
+router.post("/login", async function(req, res, next){
   let body = req.body;
 
-  let result = await models.user.findOne({
+  let result = await user.findOne({
     where: {
       email : body.userEmail
     }

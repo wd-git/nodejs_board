@@ -11,6 +11,13 @@ let userSchema = new Schema({
     },
     u_name : {
         type : String
+    },
+    u_email : {
+        type : String
+    },
+    // encript
+    u_salt : {
+
     }
 }, {
     collection: 'users'
