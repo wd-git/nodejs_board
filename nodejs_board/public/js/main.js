@@ -71,5 +71,22 @@
         
     });
     
+    // onclick Function
+
+    $('.login').on('click', function() {
+        var loginForm = document.login100-form;
+        var userId = loginForm.userId.value;
+        var password = loginForm.password.value;
+            
+        if(!userId || !password){
+                alert("아이디와 비밀번호를 모두 입력해주세요.")
+        }else{
+                loginForm.submit();
+        }
+    });
+
+    $('.signup').on('click', function() {
+        location.href = "user/signup"
+    });
 
 })(jQuery);
