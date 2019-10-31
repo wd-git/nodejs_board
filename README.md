@@ -11,7 +11,7 @@ written by wdson (2019.10)
 
 ## Tools
 
-Nodeclipse
+visual studio code
 
 Studio 3T
 
