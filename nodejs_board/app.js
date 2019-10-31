@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var crypto = require('crypto');
 
+var passport = require("passport");
+var setUpPassport = require("./setuppassport");
 // session setting
 
 var logger = require('morgan');
@@ -18,6 +20,7 @@ var User = require('./models/user.js');
 /**
  *	MongoDB setup use : mongoose
  */
+
 //mongodb 
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
@@ -47,6 +50,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(session({
+  secret:"SDMKLMLKWQMELKMKLRJKL^&%@^&#@", // 임의의 문자로 인코딩 -> 암호화
+  resave:true,
+  saveUninitialized:true
+}));
+app.use()
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

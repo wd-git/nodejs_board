@@ -42,6 +42,7 @@ router.route('/signup').post(function(req, res, next) {
     let body = req.body;
 
     user.create({
+      
       name: body.userName,
       email: body.userEmail,
       password: body.password

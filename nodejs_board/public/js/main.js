@@ -85,8 +85,13 @@
         }
     });
 
-    $('.signup').on('click', function() {
+    $('.gosignup').on('click', function() {
         location.href = "user/signup"
     });
+
+    $('.cancle').on('click', function() {
+        location.href = "/"
+    });
+
 
 })(jQuery);
