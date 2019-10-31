@@ -1,5 +1,6 @@
 
 # nodejs_board
+![image](https://user-images.githubusercontent.com/54516329/67937657-50197500-fc11-11e9-840d-ff660f14040f.png)
 written by wdson (2019.10)
 
 ## Usage
@@ -35,4 +36,5 @@ RHEL 7.7
  @mongodb : 4.2.1
 
 ### Memo
-what is mongoose ? = spring.mybatis (mapping @ mongodb in node.js (Express) 
+
+- 회원 비밀번호 암호화 진행중
