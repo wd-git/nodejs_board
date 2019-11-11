@@ -86,7 +86,7 @@
     });
 
     $('.gosignup').on('click', function() {
-        location.href = "user/signup"
+        location.href = "/register"
     });
 
     $('.cancle').on('click', function() {

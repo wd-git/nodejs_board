@@ -1,36 +1,8 @@
+# node-express-passport-mongoose-auth
+This source code is part of [Node.js, Express.js, Mongoose.js and Passport.js Authentication tutorial](https://www.djamware.com/post/58bd823080aca7585c808ebf/nodejs-expressjs-mongoosejs-and-passportjs-authentication)
 
-# nodejs_board
-written by wdson (2019.10)
+* Clone this repo
+* Run 'npm install'
+* Run 'npm start' or 'nodemon'
 
-## Usage
-Node.js (Express MVC)
-MONGODB(MONGOOSE)
-
-DB Server : AWS(EC2@RHEL7)
-
-## Developing version
-1.0 : Simply CRUD BOARD
-2.0 : + UI/UX Design
-
-### Tools
-
-Nodeclipse
-Studio 3T
-putty
-
-### Environment
-
-macOS : mojave
-
-node.Js : 12.13.0
-
- @Express : 4.17.1
-
- @Mongoose : 5.7.6
- 
- @body-parser : 1.19.0
-
-mongodb : 4.2.1
-
-### Memo
-what is mongoose ? = spring.mybatis (mapping @ mongodb in node.js (Express) 
+If you think this source code is useful, it will be great if you just give it star or just buy me a cup of cofee [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q5WK24UVWUGBN)
